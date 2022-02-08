@@ -1,5 +1,5 @@
-Moralis.initialize("OQvfFjndjsVVeXjqploBBzf0cTFa90shSgUi65AF"); //Server url from moralis.io
-Moralis.serverURL = "https://7dnpxaqmgrdv.usemoralis.com:2053/server"; // Application id from moralis.io
+Moralis.initialize("YOUR_MORALIS_APP_ID"); //Server url from moralis.io
+Moralis.serverURL = "YOUR_MORALIS_APP_ID"; // Application id from moralis.io
 
 let currentTrade = {};
 let currentSelectSide;
@@ -13,7 +13,6 @@ async function init() {
   if (currentUser) {
     document.getElementById("swap_button").disabled = false;
   }
-  
  
 }
 
@@ -23,11 +22,11 @@ async function listAllAvailableTokens() {
   });
  
   tokens = result.tokens;
-
+console.log(tokens)
+ 
   let parent = document.getElementById('token_list');
   for (const address in tokens) {
     let token = tokens[address]
-    // Create the structure of the HTML
     let div = document.createElement('div');
     div.setAttribute("data-address", address)
     div.className = "token_row";
