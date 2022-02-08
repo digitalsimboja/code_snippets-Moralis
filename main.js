@@ -46,9 +46,6 @@ async function listAllAvailableTokens() {
 }
 
 function selectToken(address){
-  //get the token address
-  //get the token price
-  // display the above two results
   closeModal();
   // let address = event.target.getAttribute("data-address");
   currentTrade[currentSelectSide] = tokens[address];
